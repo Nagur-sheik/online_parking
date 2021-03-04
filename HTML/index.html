@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Adding logo in tab-->
+    <link rel="icon" href="" type="image/icon type">
+    <link rel="stylesheet" href="..\CSS\index.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+	<header>
+		<p class="logo">SlotYourParking</p>
+		<nav>
+			<ul class="nav-links">
+				<li>
+				 <a href="#">Post Slot</a> 
+				</li>
+				<li>
+				 <a href="#">About</a>
+				</li>
+		</nav>
+		<a class="cta" href="#"><button type="button">Log In</button></a>
+		<a class="cta" href="#"><button type="button">Sign Up</button></a>
+	</header>
+	<h1>Park Before Arriving</h1>
+	<div class="search">
+		<div class="search-container">
+			<p>WHERE DO YOU WANT TO PARK?</p>
+		    <input type="text" >
+		    
+		</div>
+		<div class="search-button">
+			<button type="button">SEARCH</button>
+		</div>
+		
+		
+	</div>
+
+    <div class="slider">
+		<!-- fade css -->
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>AIRPORTS</h1>
+				
+			</div>
+			<img class="img-animation" src="../IMAGES/airport_parking.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>HARBOUR</h1>
+				<!-- <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p> -->
+			</div>
+			<img class="img-animation" src="../IMAGES/harbour_parking.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>STATION</h1>
+				<!-- <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p> -->
+			</div>
+			<img class="img-animation" src="../IMAGES/station_parking.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<h1>STREET PARKING</h1>
+				<!-- <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p> -->
+			</div>
+			<img class="img-animation" src="../IMAGES/street_parking.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<!-- <div class="myslide fade"> 
+			<div class="txt">
+				<h1>IMAGE 5</h1>
+				<p>Web Devoloper<br>Subscribe To My Channel For More Videos</p>
+			</div>
+			<img src="img5.jpg" style="width: 100%; height: 100%;">
+		</div> -->
+		<!-- /fade css -->
+		
+		<!-- onclick js -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+		</div>
+		<div class="presence">
+			<h1>OUR PRESENCE</h1>
+		</div>
+		<div class="presence-container">
+			<h1>Airport</h1>
+			<div class="presence-flex-container">
+				<p>Toronto International Airport</p>
+				<p>Vancouver International Airport</p>
+				<p>Montréal-Trudeau International Airport</p>
+				<p>Calgary International Airport</p>
+				<p>Edmonton International Airport</p>
+				<p>Ottawa International Airport</p>
+				<p>Winnipeg International Airport</p>
+				<p>Halifax Stanfield International Airport</p>
+				<p>Billy Bishop Toronto City Airport</p>
+				<p>Kelowna International Airport</p>
+			</div>
+
+		</div>
+		<div class="presence-container">
+			<h1>Stations</h1>
+			<div class="presence-flex-container">
+				<p>Finch</p>
+				<p>North York Centre</p>
+				<p>Sheppard–Yonge</p>
+				<p>York Mills</p>
+				<p>Lawrence</p>
+				<p>Eglinton</p>
+				<p>Davisville</p>
+				<p>St. Clair</p>
+				<p>Summerhill</p>
+				<p>Rosedale</p>
+				<p>Bloor–Yonge</p>
+				<p>Wellesley</p>
+				<p>College</p>
+				<p>Dundas</p>
+				<p>Queen</p>
+				<p>King</p>
+				<p>Union</p>
+				<p>St. Andrew</p>
+				<p>Osgoode</p>
+				<p>St. Patrick</p>
+			</div>
+
+		</div>
+		<div class="presence-container">
+			<h1>Harbours</h1>
+			<div class="presence-flex-container">
+				<p>Amherstburg</p>
+				<p>Bayfield</p>
+				<p>Belle River</p>
+				<p>Belleville Harbor</p>
+				<p>Bobcaygeon Harbor</p>
+				<p>Brimley Harbor</p>
+				<p>Buckhorn Harbor</p>
+				<p>Burritts Rapids</p>
+			</div>
+
+		</div>
+<script src="../JS/app.js"></script>
+</body>
+</html>
