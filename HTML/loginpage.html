@@ -13,11 +13,13 @@
     <form>
         <!-- <label><b>User Name</b></label> -->
         <input type="text" name="uname" id="uname" placeholder="Username"><br><br>
+        <!-- <label><b>Password</b></label> -->
         <input type="password" name="pass" id="pass" placeholder="Password"><br><br>
-        <input type="button" name="log" id="log" value="Log In" onsubmit="validateForm();">
+        <input type="reset" id="reset" value="Reset" onclick="reset()">
+        <input type="button" name="log" id="log" value="Log In" onclick="login()">
         <input type="checkbox" id="check"> 
         <span style="color:black">Remember me</span><br><br>
-        <a href="#">Forgot My Password</a
+        <a href="#">Forgot Password?</a>
     </form>
   </div> 
 </body>

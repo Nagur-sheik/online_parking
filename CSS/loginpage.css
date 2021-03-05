@@ -32,6 +32,22 @@ body
     padding-left: 8px;  
       
 }  
+#reset{  
+    width: 100px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+} 
+
+#reset:hover{
+    background-color:orangered;
+    color: white;
+    
+}
+
+
 #log{  
     width: 100px;  
     height: 30px;  
