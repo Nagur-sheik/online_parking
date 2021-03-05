@@ -1,0 +1,78 @@
+table{
+    margin-left: 33%;
+}
+.smalltd1{
+    font-size: 20px;
+    padding: 20px;
+    padding-bottom:0;
+}
+.smalltd2{
+    padding: 20px;
+    width: 4px;
+    padding-bottom:0;
+}
+.inputtext{
+    font-size: 20px;
+    border: solid 1px #808080;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+
+}
+.checkmsg{
+    color: red;
+    font-size: 16px;
+    padding: 20px;
+    
+}
+.registbtn{
+    font-size: 24px;
+    color: aliceblue;
+    background: rgb(172,1,55);
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    margin-left: 25%;
+    margin-top: 20px;
+    width: 200px;
+    text-align: center;
+    
+}
+.sexselect, .checkBoxStyle {
+    font-size:20px;
+    border:solid 1px #808080;
+    border-radius: 5px;
+    padding: 10px;
+   
+}
+.sexselect{  
+    width: 222px;
+    height: 46px;  
+}
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
