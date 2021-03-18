@@ -22,7 +22,7 @@ function login()
     }
     else
     {
-        alert("Enter password to login");
+        alert("enter password to login");
     }
 
 }
