@@ -121,6 +121,7 @@ header {
   justify-content: space-around;
   align-items: center;
   background-color: #92bde7;
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
 }
 .presence-flex-container h1 {
   margin-left: 200px;
