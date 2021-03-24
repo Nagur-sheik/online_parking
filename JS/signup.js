@@ -1,127 +1,71 @@
-function registCheckXXXXXXXXXXX(){
-    var textValue = document.getElementsByName('phone')[0].value;
-    
-    if(textValue.length != 10){
-        document.getElementById('phonemsg').innerHTML = 'Please fill in 10 digits.'
-    }            
-    else{
-        for(var i = 0; i < textValue.length; i++){
-            if(textValue.substr(i,1) < "0" || textValue.substr(i,1) > "9"){
-                document.getElementById('phonemsg').innerHTML = 'Only digits please.'
-            }
-        }    
+var form = document.getElementById('form');
+var username = document.getElementById('username');
+var password = document.getElementById('pass');
+var email = document.getElementById('email');
+var password2 = document.getElementById('passc');
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     checkInputs(); 
+// });
+
+function checkInputs() {
+    //get the values from the inputs 
+    var usernameValue = username.value.trim();
+    var emailValue = email.value.trim();
+    var passwordValue = password.value.trim();
+    var password2Value = password2.value.trim();
+    if(usernameValue === '') {
+        //show error
+        //add error class
+        setErrorFor(username, 'username cannot be blank');
+        return false;
     }
-
-    var textValue1 = document.getElementsByName('password')[0].value;
-    if(textValue1.length < 8){
-        document.getElementById('passwordmsg').innerHTML='No shorter than 8 digits';
+    else {
+        // add success class
+        setSuccessFor(username);
     }
-    var textValue2 = document.getElementsByName('passwordDoubleCheck')[0].value;
-    if(textValue2.length < 8){
-    document.getElementById('passwordDoubleCheckmsg').innerHTML = 'No shorter than 8 digits';
+    if(emailValue === '') {
+		setErrorFor(email, 'Email cannot be blank');
+        return false;
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Not a valid email');
+        return false;
+	} else {
+		setSuccessFor(email);
+	}
+	
+	if(passwordValue === '') {
+		setErrorFor(password, 'Password cannot be blank');
+        return false;
+	} else {
+		setSuccessFor(password);
+	}
+	
+	if(password2Value === '') {
+		setErrorFor(password2, 'Password two cannot be blank');
+        return false;
+	} else if(passwordValue !== password2Value) {
+		setErrorFor(password2, 'Passwords does not match');
+        return false;
+	} else{
+		setSuccessFor(password2);
+	}
 }
-    else{
-        if(textValue1 != textValue2){
-            document.getElementById('passwordDoubleCheckmsg').innerHTML = 'Not the same password';
-        }
-    }
-    var textValue3 = document.getElementsByName('username')[0].value;
-    if(textValue3.length > 10){
-        document.getElementById('usernamemsg').innerHTML = 'No longer than 10 digits';
-    }
-    var textValue4 = document.getElementsByName('sign')[0].value;
-    if(textValue4.length >10){
-        document.getElementById('signmsg').innerHTML = 'No longer than 10 digits';
-    }
+function setErrorFor(input,message) {
+    var formControl = input.parentElement; //form-control
+    var small = formControl.querySelector("small");
 
+    //add error mesage inside the small tag
+    small.innerText = message;
+    //add error class
+    formControl.className = 'form-control error';
 }
-
-function clearPhoneMsg(){
-    document.getElementById('phonemsg').innerHTML = '';
+function setSuccessFor(input){
+    var formControl = input.parentElement; //form-control
+    formControl.className = 'form-control success';
 }
-
-function phoneOnfocus(){
-   
-    document.getElementById('phonemsg').innerHTML = '';
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-function phoneOnblur(){
-   var textValue = document.getElementsByName('phone')[0].value;      
-   if(textValue.length != 10){
-        document.getElementById('phonemsg').innerHTML = 'Must be 10 digits';
-   }
-   else{
-        for(var i = 0; i < textValue.length; i++){
-            if(textValue.substr(i,1)<"0" || textValue.substr(i,1) > "9"){
-                document.getElementById('phonemsg').innerHTML = 'ONLY number';
-            }
-        }
-    }    
-}
-function passwordOnfocus(){
-    document.getElementById('passwordmsg').innerHTML = '';
-}
-function passwordOnblur(){
-    var textvalue1 = document.getElementsByName('password')[0].value;
-    if(textvalue1.length < 8){
-        document.getElementById('passwordmsg').innerHTML = 'No shorter than 8 digits';
-    }  
-}
-
-function passwordDoubleCheckOnfocus(){
-    document.getElementById('passwordDoubleCheckmsg').innerHTML = '';
-}
-function passwordDoubleCheckOnblur(){
-    var textValue1 = document.getElementsByName('password')[0].value; 
-    
-    
-    var textValue2 = document.getElementsByName('passwordDoubleCheck')[0].value;
-    if(textValue2.length < 8){
-        document.getElementById('passwordDoubleCheckmsg').innerHTML = 'No shorter than 8 digits';
-    }
-    else{
-        if(textValue1  !=  textValue2){
-            document.getElementById('passwordDoubleCheckmsg').innerHTML = 'Not the same password';
-        }
-    }
-}
-function usernameOnfocus(){
-    document.getElementById('usernamemsg').innerHTML = "";
-}
-function usernameOnblur(){
-    var textValue3 = document.getElementsByName('username')[0].value;
-    if(textValue3.length > 10){
-        document.getElementById('usernamemsg').innerHTML = "No longer than 10 digits";
-    }
-}
-function signOnfocus(){
-    document.getElementById('signmsg').innerHTML = "";
-}
-function signOnblur(){
-    var textvalue4 = document.getElementsByName('sign')[0].value;
-    if(textvalue4.length > 10){
-        document.getElementById('signmsg').innerHTML = "No longer than 10 digits";
-    }
-}
-
-function registCheck(){
-     phoneOnblur();
-     passwordOnblur();
-     passwordDoubleCheckOnblur();
-     usernameOnblur();
-     signOnblur();
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
