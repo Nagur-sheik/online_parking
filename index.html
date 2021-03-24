@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Adding logo in tab-->
-    <link rel="icon" href="./CSS/index.css" type="text/css">
+    <!-- <link rel="icon" href="./CSS/index.css" type="text/css"> -->
 	<link rel="stylesheet" href="./CSS/index.css">
     <title>Document</title>
 </head>
@@ -21,19 +21,23 @@
 				 <a href="#">About</a>
 				</li>
 		</nav>
-		<a class="cta" href="loginpage.html"><button type="button">Log In</button></a>
-		<a class="cta" href="Signup.html"><button type="button">Sign Up</button></a>
+		<a class="cta" href="loginpage.html"><button class="nav-button" type="button">Log In</button></a>
+		<a class="cta" href="Signup.html"><button class="nav-button" type="button">Sign Up</button></a>
 	</header>
-	<h1>Park Before Arriving</h1>
+	<h1 id="title1">Park Before Arriving</h1>
 	<div class="search">
-		<div class="search-container">
-			<p>WHERE DO YOU WANT TO PARK?</p>
-		    <input type="text" >
-		    
-		</div>
-		<div class="search-button">
-			<button type="button">SEARCH</button>
-		</div>
+		<form>
+			<div class="search-dialog">
+				<label for="search" style="color:#485e74" >WHERE DO YOU WANT TO PARK</label><br>
+				<input type="text" id="search" placeholder="where do you want to park?" name="search">
+
+			</div>
+			<div class="button-dialog">
+				<button type="submit">Search</button>
+
+			</div>
+            
+		</form>
 		
 		
 	</div>
@@ -45,7 +49,7 @@
 				<h1>AIRPORTS</h1>
 				
 			</div>
-			<img class="img-animation" src="../IMAGES/airport_parking.jpg" style="width: 100%; height: 100%;">
+			<img class="img-animation" src="./IMAGES/airport_parking.jpg" style="width: 100%; height: 100%;">
 		</div>
 		
 		<div class="myslide fade">
@@ -53,7 +57,7 @@
 				<h1>HARBOUR</h1>
 				<!-- <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p> -->
 			</div>
-			<img class="img-animation" src="../IMAGES/harbour_parking.jpg" style="width: 100%; height: 100%;">
+			<img class="img-animation" src="./IMAGES/harbour_parking.jpg" style="width: 100%; height: 100%;">
 		</div>
 		
 		<div class="myslide fade">
@@ -61,7 +65,7 @@
 				<h1>STATION</h1>
 				<!-- <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p> -->
 			</div>
-			<img class="img-animation" src="../IMAGES/station_parking.jpg" style="width: 100%; height: 100%;">
+			<img class="img-animation" src="./IMAGES/station_parking.jpg" style="width: 100%; height: 100%;">
 		</div>
 		
 		<div class="myslide fade">
@@ -69,7 +73,7 @@
 				<h1>STREET PARKING</h1>
 				<!-- <p>Web Devoloper<br>Subscribe To My Channel For More Videos</p> -->
 			</div>
-			<img class="img-animation" src="../IMAGES/street_parking.jpg" style="width: 100%; height: 100%;">
+			<img class="img-animation" src="./IMAGES/street_parking.jpg" style="width: 100%; height: 100%;">
 		</div>
 		
 		<!-- <div class="myslide fade"> 
@@ -97,16 +101,16 @@
 		<div class="presence-container">
 			<h1>Airport</h1>
 			<div class="presence-flex-container">
-				<p>Toronto International Airport</p>
-				<p>Vancouver International Airport</p>
-				<p>Montréal-Trudeau International Airport</p>
-				<p>Calgary International Airport</p>
-				<p>Edmonton International Airport</p>
-				<p>Ottawa International Airport</p>
-				<p>Winnipeg International Airport</p>
-				<p>Halifax Stanfield International Airport</p>
-				<p>Billy Bishop Toronto City Airport</p>
-				<p>Kelowna International Airport</p>
+				<div ><p >Toronto International Airport</p></div>
+				<div><p>Vancouver International Airport</p></div>
+				<div><p>Montréal-Trudeau International Airport</p></div>
+				<div><p>Calgary International Airport</p></div>
+				<div><p>Edmonton International Airport</p></div>
+				<div><p>Ottawa International Airport</p></div>
+				<div><p>Winnipeg International Airport</p></div>
+				<div><p>Halifax Stanfield International Airport</p></div>
+				<div><p>Billy Bishop Toronto City Airport</p></div>
+				<div><p>Kelowna International Airport</p></div>
 			</div>
 
 		</div>
@@ -150,6 +154,6 @@
 			</div>
 
 		</div>
-<script src="../JS/app.js"></script>
+<script src="./JS/app.js"></script>
 </body>
 </html>
