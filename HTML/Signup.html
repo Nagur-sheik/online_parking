@@ -1,120 +1,25 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-		<div style="background-image: url('../IMAGES/parking.jpg');">
-		<img src="../IMAGES/traffic.gif" alt="Trulli" width="150" height="133">
-		<p style="font-size:70px;color:white;">Slot Your Parking...!</p>
-        <link rel="stylesheet" href="../CSS/regist.css"> 
-        <title>Sign Up</title>
-        <script src="../JS/signup.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="signup.css">
 
-                  
-    </head>
-    <body>
-    <table>
-        <tr>
-            <td class="smalltd1">Username</td>
-            <td class="smalltd2">
-                <input type="text" name="username" class="inputtext" onfocus="usernameOnfocus();" onblur="usernameOnblur();" />
-            </td>
-            <td>
-                <div class="checkmsg" id="usernamemsg"></div>
-            </td>
-        </tr>
-        <tr>
-            <td class="smalltd1">Phone No.</td>
-            <td class="smalltd2">
-                <input type="text" name="phone" class="inputtext" 
-                       onfocus = "phoneOnfocus();" onblur=" phoneOnblur();"    />                                             
-            </td>           
-            <td>
-                <div class="checkmsg" id="phonemsg"></div>
-            </td>
-        </tr>
-       
-        <tr>
-            <td class="smalltd1">Enter_Password</td>
-            <td class="smalltd2">
-                <input type="password" name="password" class="inputtext"   onfocus="passwordOnfocus();" onblur="passwordOnblur();" value="abcdefg" />
-            </td>
-            <td>
-                <div class="checkmsg" id="passwordmsg"></div>
-            </td>
-        <tr>
-            <td class="smalltd1">Re-Enter_Password</td>
-            <td class="smalltd2">
-                <input type="password" name="passwordDoubleCheck" class="inputtext"
-                       onfocus="passwordDoubleCheckOnfocus();" 
-                    onblur="passwordDoubleCheckOnblur();"/>
-            </td>
-            <td>
-                <div class="checkmsg" id="passwordDoubleCheckmsg"></div>
-            </td>
-        </tr>
-        <tr>
-            <td class="smalltd1">Gender</td>
-            <td class="smalltd2">
-                <select class="sexselect">
-                    <option>Male</option>
-                    <option>Female</option> 
-                </select>
-            </td>
-            <td>
-                <div class="checkmsg" id="sexmsg"></div>
-            </td>
-        </tr>
-                <tr>
-            <td class="smalltd1">Signature</td>
-            <td class="smalltd2">
-                <textarea name="sign" rows="5" cols="29" onfocus="signOnfocus();" onblur="signOnblur();" ></textarea>
-            </td>
-            <td>
-                <div class="checkmsg" id="signmsg"></div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <input type="button" class="registbtn" value="Sign Up" onclick = "javascript:registCheck()" />  
-               
-            </td>     
-        </tr>
-    </table>                                             
-    
-    </body>
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form class="form" id="form" action="login.html" method="POST" onsubmit="return checkInputs()">
+            <div class="form-control">
+                <label for="usname">Username</label>
+                <input type="text" id="username" placeholder="jackson123">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
 
-</html>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
