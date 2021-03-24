@@ -52,3 +52,20 @@ function checkInputs() {
 		setSuccessFor(password2);
 	}
 }
+function setErrorFor(input,message) {
+    var formControl = input.parentElement; //form-control
+    var small = formControl.querySelector("small");
+
+    //add error mesage inside the small tag
+    small.innerText = message;
+    //add error class
+    formControl.className = 'form-control error';
+}
+function setSuccessFor(input){
+    var formControl = input.parentElement; //form-control
+    formControl.className = 'form-control success';
+}
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
