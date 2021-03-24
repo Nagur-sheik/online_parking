@@ -73,3 +73,22 @@ body {
     bottom: 0px;
     left: 0px;
 }
+.form button {
+	background-color:#485e74;
+	border: 2px solid #485e74;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.form button:hover {
+    background: #92bde7;
+    color:#fff;
+    outline:0;
+    transition: background-color 2s ease-out;
+}
