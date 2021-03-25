@@ -1,26 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href ="./CSS/loginpage.css" rel ="stylesheet" type = "text/css" /> 
-    <script src="./JS/loginpage.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="login.css">
+	<title>Login - Slot Your Park - </title>
+	
 </head>
-<body background="../IMAGES/loginbackground.gif">
-  <div class="login">
-    <form>
-        <!-- <label><b>User Name</b></label> -->
-        <input type="text" name="uname" id="uname" placeholder="Username"><br><br>
-        <!-- <label><b>Password</b></label> -->
-        <input type="password" name="pass" id="pass" placeholder="Password"><br><br>
-        <input type="reset" id="reset" value="Reset" onclick="reset()">
-        <input type="button" name="log" id="log" value="Log In" onclick="login()">
-        <input type="checkbox" id="check"> 
-        <span style="color:black">Remember me</span><br><br>
-        <a href="#">Forgot Password?</a>
-    </form>
-  </div> 
+
+<body>
+	<div class="container">
+		<div class="row">
+			<h2 style="text-align:center">User <span id="log">Login</span></h2>
+			<div class="vl">
+				<span class="vl-innertext">OR</span>
+			</div>
+
+			<div class="col">
+				<a href="#" class="fb btn">
+					<i class="fa fa-facebook fa-fw"></i> Login with Facebook
+				</a>
+				<a href="#" class="twitter btn">
+					<i class="fa fa-twitter fa-fw"></i> Login with Twitter
+				</a>
+				<a href="#" class="google btn"><i class="fa fa-google fa-fw">
+					</i> Login with Google+
+				</a>
+			</div>
+
+
+			<div class="col">
+				<div class="hide-md-lg">
+					<p><b>log in manually</b></p>
+				</div>
+				<form class="login_form" action="index.html" method="post" name="form" onsubmit="return validated()">
+					<label for="usname"> <i class="fa fa-envelope icon"></i>Email</label><br>
+					<input id="usname" type="text" autocomplete="off" name="username" placeholder="Username">
+					<div id="email_error">must enter email or username</div>
+					<label for="pass"><i class="fa fa-key icon"></i>Password</label><br>
+					<input id="pass" type="password" autocomplete="off" name="password" placeholder="Password">
+					<div id="pass_error">Password compulsory</div>
+					<input type="submit" value="Login">
+				</form>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="bottom-container">
+		<div class="row">
+			<div class="col">
+				<a href="#" style="color:#485e74" class="btn">Sign up</a>
+			</div>
+			<div class="col">
+				<a href="#" style="color:#485e74" class="btn">Forgot password?</a>
+			</div>
+		</div>
+	</div>
+
 </body>
+
+</html>
+<script src="login.js"></script>
+</body>
+
 </html>
