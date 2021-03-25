@@ -109,13 +109,25 @@ header {
   text-align: center;
   color:#485e74;
 }
-.presence-container {
+/* grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap:10px;
+}
+.grid-item {
+  padding:10px;
+  border: 1px solid #b1cde9;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+/* .presence-container {
   color:#485e74;
 }
 .presence-flex-container {
   /* width: calc(100% /3);
   display: inline-block; */
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -125,7 +137,7 @@ header {
 }
 .presence-flex-container h1 {
   margin-left: 200px;
-}
+} */ 
 /* .presence-flex-container p {
   padding: 20px;
   font-size: large;
