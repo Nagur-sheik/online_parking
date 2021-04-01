@@ -47,7 +47,7 @@ span {
     display: grid;
     
 } */
-.container form input , .container form button{
+.container form input , .container form button,.container form textarea{
     width:100%;
     padding: 1em;
     border: 1px solid #c9e6ff;
@@ -69,12 +69,14 @@ span {
     background: #c9e6ff;
     border: 0;
     text-transform: uppercase;
+    height: 100%;
 }
 .container form button:hover, .container form button:focus{
     background: #92bde7;
     color:#fff;
     outline:0;
     transition: background-color 2s ease-out;
+    cursor:pointer;
 
 }
 
@@ -91,18 +93,27 @@ span {
   
   [type="file"] + label {
     background-color: #c9e6ff;
+    position: relative;
     color: black;
+    /* border:0; */
     text-transform: uppercase;
     cursor: pointer;
     /* display: inline-block; */
     width: 100%;
+    height:100%;
+     padding: 10px; 
+     /* align-items: center;  */
     text-align: center;
+    
   }
   
   [type="file"]:focus + label,
-  [type="file"] + label:hover {
+  [type="file"]:hover + label {
       background-color: #92bde7;
       outline: 0;
+       transition: background-color 2s ease-out; 
+       color: #fff;
+       cursor:pointer;
   }
   
   /* [type="file"]:focus + label {
