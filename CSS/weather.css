@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #92bde7;
+    color: #485e74;
+  }
+  h1{
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .input{
+    text-align: center;
+    margin: 100px auto;
+  }
+  
+  input[type="submit"]{
+    padding: 15px 30px;
+    background: #ffff;
+    color: #485e74;
+    border: none;
+    border-radius: 1px;
+    font-weight:bold;
+    font-size: 20px;
+  }
+  
+  .input input[type="text"]{
+    width: 600px;
+    height: 55px;
+    padding: 5px 10px;
+    background: #ffff;
+    border: none;
+    border-radius: 1px;
+    font-weight:bold;
+    font-size: 20px;
+  }
+  
+  
+  .card{
+    width: auto;
+    background: #c9e6ff;
+    height: 40vh;
+    margin: 50px auto;
+    border-radius: 2px;
+    display: none;
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+  }
+  
+  .forecast-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1 1;
+  }
+  p {
+    padding: 10px;
+  }
+  @media only screen and (max-width: 600px) {
+    .input input[type="text"] {
+      width:auto;
+      display: inline-block;
+      padding: 10px;
+  
+    }
+    input[type="submit"] {
+      width: 100px;
+      display: inline-block;
+      padding:10px;
+      margin: 10px;
+    } 
+  
+  
+  }
