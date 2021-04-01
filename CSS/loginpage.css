@@ -1,7 +1,7 @@
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color:  #485e74;
-	background: #92bde7;
+	background: #d0d7dd;
 	display:flex;
 	justify-content: center;
 	flex-direction: column;
@@ -15,7 +15,7 @@ body {
   /* style the container */
   .container {
 	position: relative;
-	background-color:#c9e6ff;
+	background-color:#c1cad1;
 	padding: 20px 0 30px 0;
 	
   } 
@@ -67,13 +67,13 @@ body {
   }
   /* style the submit button */
   input[type=submit] {
-	background-color: #3B5998;
+	background-color: #2c498c;
 	color: white;
 	cursor: pointer;
   }
   
   input[type=submit]:hover {
-	background-color:  #92bde7;
+	background-color:  #bcc5ce;
 	transition: background-color 2s ease-out;
   }
   
@@ -121,8 +121,8 @@ body {
   /* bottom container */
   .bottom-container {
 	text-align: center;
-	background-color:#c9e6ff;
-	box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+	background-color:#d4dbe0;
+	box-shadow: 0 0 20px 0 rgba(210, 217, 224, 0.7);
 	border-radius: 0px 0px 4px 4px;
   }
 /* Hidding error messages */

@@ -73,6 +73,10 @@ body {
     bottom: 0px;
     left: 0px;
 }
+.form-control.error small {
+    visibility: visible;
+    color:#e74ec3;
+}
 .form button {
 	background-color:#485e74;
 	border: 2px solid #485e74;
