@@ -39,5 +39,15 @@
     </div>
   </div>
 <script src="./JS/weather.js"></script>
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR2aNP95Xi9-4XRxrQGdmfKTZFHz1wSOk&libraries=places&callback=activatePlacesSearch">
+</script>
+<script>
+  function activatePlacesSearch() {
+  var input = document.getElementById("city");
+  var autocomplete = new google.maps.places.Autocomplete(input);
+  console.log(autocomplete);
+}
+</script>
 </body>
 </html>
