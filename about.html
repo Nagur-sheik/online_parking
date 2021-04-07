@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>About</title>
 </head>
+
 <body>
     <div data-role="page">
         <header data-role="header" data-theme="b">
@@ -21,21 +23,56 @@
 
         </header>
         <a href="#" data-role="button" data-icon="home" data-inline="true" class="custom-btn">Home</a>
+        <a href="Weather.html" data-role="button" data-icon="location" data-inline="true" class="custom-btn">Weather</a>
         <a href="#" data-role="button" data-icon="grid" data-inline="true" class="custom-btn">Contact Us</a>
-        <section data-role="content">
-            <header data-role="header" data-theme="b" class="custom-developer">
-                <h1>Developers</h1>
+        <section data-role="content" id="sec">
+            <header data-role="header" data-theme="b">
+                <!-- class="custom-developer" -->
+                <h1>Crew</h1>
             </header>
-            
-            
+            <div data-role="collapsible">
+                <h1>Vinay Kumar</h1>
+                <p>Implemented login page with form validation which provides user to login to the site,Weather page
+                    Styles and about page using jquery mobile </p>
+            </div>
+            <div data-role="collapsible">
+                <h1>Nagur Meeravalli</h1>
+                <p>Implemented Sign up page with form validation which provides user to sign-up,Weather page and about
+                    page using jquery mobile </p>
+            </div>
+            <div data-role="collapsible">
+                <h1>Uday Shankar</h1>
+                <p>Implemented home page and carousel of images,Functionality for weather app to monitor the weather
+                    forecast.and about page using jqury</p>
+            </div>
+            <div data-role="collapsible">
+                <h1>Nidhi Arora</h1>
+                <p>Implemented a page for posting parking slots for the user and validation of form for posting the slot
+                </p>
 
+            </div>
+            <header data-role="header" data-theme="b">
+                <!-- class="custom-developer" -->
+                <h1>News Letter Subscribtion</h1>
+            </header>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <input type="text" id="newsletter" name="url" placeholder="newsletter" />
+                </div>
+                <div class="ui-block-b">
+                    <input type="submit" value="Subscribe " />
+                </div>
+            </div>
         </section>
-        <footer data-role="footer">
-            <h4>Footer</h4>
+        <footer data-role="footer" class="ui-grid-a">
+            <div class="ui-block-a"><a href="sec" data-role="button" data-icon="arrow-u">Up</a></div>
+            <div class="ui-block-b"><a href="#" data-role="button" data-icon="arrow-d">Down</a></div>
+
 
         </footer>
 
     </div>
-    
+
 </body>
+
 </html>
