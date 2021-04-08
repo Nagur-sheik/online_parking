@@ -23,6 +23,7 @@
 				<li>
 				 <a href="about.html">About</a>
 				</li>
+			</ul>
 		</nav>
 		<a class="cta" href="loginpage.html"><button class="nav-button" type="button">Log In</button></a>
 		<a class="cta" href="Signup.html"><button class="nav-button" type="button">Sign Up</button></a>
@@ -236,10 +237,14 @@
  };
   var input = document.getElementById("search");
   var autocomplete = new google.maps.places.Autocomplete(input,options);
+//   fetch(autocomplete)
+
+//   .then(gm_accessors_ => )
   console.log(autocomplete);
-  console.log(input);
-  console.log(input.value);
-  console.log(autocomplete);
+//   var inputValue = autocomplete.gm_accessors_.place.Se.formattedPrediction;
+//   console.log(inputValue);
+//   var obj = JSON.parse(autocomplete);
+//   console.log(obj);
 }
 </script>
 </body>
