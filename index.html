@@ -40,6 +40,10 @@
 				<button type="submit">SEARCH</button>
 
 			</div> 
+			<!-- <div>
+
+				<input type = "date" name="date" id="date-picker" >
+			</div> -->
             
 		</form>
 		
@@ -222,5 +226,21 @@
 	</div>
 </footer>
 <script src="./JS/app.js"></script>
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR2aNP95Xi9-4XRxrQGdmfKTZFHz1wSOk&libraries=places&callback=activatePlacesSearch">
+</script>
+<script>
+  function activatePlacesSearch() {
+	var options = {
+  componentRestrictions: {country: "ca"}
+ };
+  var input = document.getElementById("search");
+  var autocomplete = new google.maps.places.Autocomplete(input,options);
+  console.log(autocomplete);
+  console.log(input);
+  console.log(input.value);
+  console.log(autocomplete);
+}
+</script>
 </body>
 </html>

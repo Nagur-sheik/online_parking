@@ -405,6 +405,14 @@ footer {
   }
   /* /4 */
   
+  .pac-container {
+    border: 1px solid #92bde7;
+    background: #c9e6ff;
+    color: #485e74;
+  }
+  .pac-item {
+    padding:5px;
+  }
   
   
   /* 5 */
