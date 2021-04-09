@@ -38,7 +38,7 @@
 
 			</div>
 			 <div class="button-dialog">
-				<button type="submit" id="ser" onclick="redirect()">SEARCH</button>
+				<button type="submit" id="ser">SEARCH</button>
 
 			</div> 
 			<!-- <div>
@@ -248,17 +248,20 @@
 	  var place = autocomplete.getPlace();
 	  if(!place.geometry){
 		  console.log('Enter a place');
+		  alert("enter a place")
 	  }
 	  else {
 		  console.log(place.name);
 		  localStorage.setItem("pla", place.name);
+		  window.location.href = "map.html";
+
 		  
 	  }
   }
-  document.getElementById("ser").addEventListener("click",redirect);
-  function redirect() {
-	window.location.href = "map.html";
-  }
+//   document.getElementById("ser").addEventListener("click",redirect);
+//   function redirect() {
+// 	window.location.href = "map.html";
+//   }
 
 //   document.getElementById("ser").addEventListener("click", getGeometry);
 
