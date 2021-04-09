@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>Map</title>
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+          height: 100%;
+        }
+  
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+</head>
+<body>
+    <div id="map">
+
+    </div>
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+        let map;
+        let service;
+        let infowindow;
+  
+        function initMap() {
+          const canada = new google.maps.LatLng(-106.346771, 56.130366);
+          infowindow = new google.maps.InfoWindow();
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: canada,
+            zoom: 15,
+          });
+          const request = {
+            query: localStorage.getItem("pla"),
+            fields: ["name", "geometry"],
+          };
+          service = new google.maps.places.PlacesService(map);
+          service.findPlaceFromQuery(request, (results, status) => {
+            if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+              for (let i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+              }
+              map.setCenter(results[0].geometry.location);
+            }
+          });
+        }
+  
+        function createMarker(place) {
+          if (!place.geometry || !place.geometry.location) return;
+          const marker = new google.maps.Marker({
+            map,
+            position: place.geometry.location,
+          });
+          google.maps.event.addListener(marker, "click", () => {
+            infowindow.setContent(place.name || "");
+            infowindow.open(map);
+          });
+        }
+      </script>
+  
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR2aNP95Xi9-4XRxrQGdmfKTZFHz1wSOk&libraries=places"></script> -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR2aNP95Xi9-4XRxrQGdmfKTZFHz1wSOk&callback=initMap&libraries=places&v=weekly"
+    async
+  ></script>
+</body>
+</html>

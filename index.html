@@ -38,7 +38,7 @@
 
 			</div>
 			 <div class="button-dialog">
-				<button type="submit">SEARCH</button>
+				<button type="submit" id="ser" onclick="redirect()">SEARCH</button>
 
 			</div> 
 			<!-- <div>
@@ -231,21 +231,64 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR2aNP95Xi9-4XRxrQGdmfKTZFHz1wSOk&libraries=places&callback=activatePlacesSearch">
 </script>
 <script>
+	let autocomplete;
   function activatePlacesSearch() {
 	var options = {
-  componentRestrictions: {country: "ca"}
+		types: ['establishment'],
+  componentRestrictions: {'country': ['ca']},
+  fields: ['place_id', 'geometry','name']
  };
   var input = document.getElementById("search");
-  var autocomplete = new google.maps.places.Autocomplete(input,options);
-//   fetch(autocomplete)
+  autocomplete = new google.maps.places.Autocomplete(input,options);
+//   var result = autocomplete.get();
+//   console.log(result);
+ autocomplete.addListener('place_changed',onPlaceChanged);
+  }
+  function onPlaceChanged() {
+	  var place = autocomplete.getPlace();
+	  if(!place.geometry){
+		  console.log('Enter a place');
+	  }
+	  else {
+		  console.log(place.name);
+		  localStorage.setItem("pla", place.name);
+		  
+	  }
+  }
+  document.getElementById("ser").addEventListener("click",redirect);
+  function redirect() {
+	window.location.href = "map.html";
+  }
 
-//   .then(gm_accessors_ => )
-  console.log(autocomplete);
-//   var inputValue = autocomplete.gm_accessors_.place.Se.formattedPrediction;
-//   console.log(inputValue);
-//   var obj = JSON.parse(autocomplete);
-//   console.log(obj);
-}
+//   document.getElementById("ser").addEventListener("click", getGeometry);
+
+// function getGeometry() {
+//    var place = autocomplete.getPlace();
+
+//    var lat = place.geometry.location.lat;
+//    var lon = place.geometry.location.lon;
+//    console.log(lat);
+//    console.log(lon);
+// }
+
+// google.maps.event.addListener(autocomplete, 'place_changed', function() {
+// 	var place = autocomplete.getPlace();
+
+//      var lat = place.geometry.location.lat();
+//      var lon = place.geometry.location.lon();
+//             });
+// }
+// function fillInAddress() {
+//     /* Get the place details from the Autocomplete object. */
+//     /* The Autocomplete.getPlace() call retrieves a PlaceResult object */
+
+//     var place = autocomplete.getPlace();
+// 	console.log(place);
+
+//     /* Use data from place.address_components[] according to your needs */
+//     /* For reference, use the link: */
+//     /* https://developers.google.com/maps/documentation/javascript/places#place_details_results */
+// }
 </script>
 </body>
 </html>
